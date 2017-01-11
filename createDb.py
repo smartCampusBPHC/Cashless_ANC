@@ -1,3 +1,33 @@
+
+## @authors 
+    # 1 Sagar Gupta
+    # 2 Dhairya Gandhi
+
+## @ smartcampus
+
+## process is like 
+    # 1 add ur id on numpad
+    # 2 order food
+    # 3 uncle enters the amt through another numpad ****
+    # 4 us conf the amt by placing finger 
+    # 5 screen displays the transaction failed or approved 
+
+## hardware req 
+    # 1 raspberry pi
+    # 2 finger pirnt module 
+    # 3 uart
+    # 4 numpad
+    # 4 numpad (uncle side) **
+    # 5 screen 
+    # 6 jumper wires 
+    # 7 wifi router 
+
+## backend server is su server 
+
+## script to map the harware and database part 
+## script to map server and pi databases
+## 
+
 import MySQLdb
 import sys
 import os
@@ -16,6 +46,9 @@ class database:
 
     def __del__(self):
         self.db.close()
+
+
+###########################3 enter student area ################################################
 
     def create_table_student_info(self):    
         #prepare the cursors
@@ -50,6 +83,11 @@ class database:
         finally:
             cursor.close()
 
+            ## update all details functions
+
+######################################## exit student data area ##############################
+
+#################################### enter finger print area ######################################3
     def create_table_fingerprint(self):    
         #prepare the cursors
         cursor=self.db.cursor()
@@ -67,7 +105,7 @@ class database:
             print "Could not create table fingerprint. Table may already be existing"
         finally:
             cursor.close()
-
+    ## enrol a student to it
     def add_to_fingerprint(self,identity,finger):
         cursor=self.db.cursor();
         sql="INSERT into FINGERPRINT values ("+identity+",'"+finger+"')"
@@ -80,6 +118,14 @@ class database:
             print "Error adding idno:"+str(identity)+" template:"+(fingerprint)+" into fingerprint"
         finally:
             cursor.close()
+
+    ## update a students finger print
+
+    ## delete student 
+#####################3 exit finger print tables with possible queries #############################
+
+
+################## enter transaction table ########################################################
 
    def create_table_transactions_anc(self):    
         #prepare the cursors
@@ -113,9 +159,32 @@ class database:
         finally:
             cursor.close()
    
+####################################### exit transaction table ################################
+
+#################### enter server student transaction table ##########################33
 
 
+## add transaction
+## student table must also have left money in wallet(currently at 3K)
+## student should be able to view his transactions (also shows spend patterns)
+## daily earning of each shop for mining 
 
+################### exit student server table ###########################
+
+################# enter swd area ######################################
+
+## should be able to push the transactions to swd
+## should be able to add cash to wallet
+## should be able to syn instantly the repleished amt to our server database
+
+############## exit swd area #####################################
+
+######### enter anc uncle area ####################
+
+## daily monthly weekly analysis 
+## daily earning which they have to collect from swd 
+
+### exit anc uncle area ###################### 
 
 
 
