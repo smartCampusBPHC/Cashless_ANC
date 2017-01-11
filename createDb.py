@@ -159,33 +159,5 @@ class database:
         finally:
             cursor.close()
    
-####################################### exit transaction table ################################
-
-#################### enter server student transaction table ##########################33
-
-
-## add transaction
-## student table must also have left money in wallet(currently at 3K)
-## student should be able to view his transactions (also shows spend patterns)
-## daily earning of each shop for mining 
-
-################### exit student server table ###########################
-
-################# enter swd area ######################################
-
-## should be able to push the transactions to swd
-## should be able to add cash to wallet
-## should be able to syn instantly the repleished amt to our server database
-
-############## exit swd area #####################################
-
-######### enter anc uncle area ####################
-
-## daily monthly weekly analysis 
-## daily earning which they have to collect from swd 
-
-### exit anc uncle area ###################### 
-
-
 
 
